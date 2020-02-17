@@ -1,0 +1,12 @@
+site_name: My Docs
+nav:
+  - "Index": index.md
+  - "Build Pipelines": groovy and jenkins2.0.md
+  - "WebElem": javascript.md
+  - "Batch/Streaming": batch-streaming.md
+  - "Microservices": microservices.md
+  - "Containers": containers.md
+  - "Cloud": cloud.md
+  - "Tool List": toollist.md
+theme:
+#  name: 'material'
