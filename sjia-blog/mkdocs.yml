@@ -1,0 +1,8 @@
+site_name: My Docs
+nav:
+  - "Index": index.md
+  - "Build Pipelines": groovy and jenkins2.0.md
+  - "JavaScript and DOM": javascript.md
+  - "Tool List": toollist.md
+theme:
+#  name: 'material'
