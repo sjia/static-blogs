@@ -1,6 +1,6 @@
 # Welcome to sjia-docs
 
-![logo.png](./../pic/logo.png)
+![logo.png](/pic/logo.png)
 
 For more playgrounds visit:
 
