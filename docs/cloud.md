@@ -1,2 +1,0 @@
-#Cloud
-Azure/AWS.
