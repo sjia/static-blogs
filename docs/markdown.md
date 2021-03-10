@@ -42,7 +42,7 @@ $(document).ready(function () {
 
 - ![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png "可选标题")
 
-##表单： 
+##表单
 
 |  表头   | 表头  |
 |  ----  | ----  |
