@@ -1,0 +1,546 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Algorithm test - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="deep-orange">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algorithm-test" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithm test
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        引言
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm_basic/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microservices/" class="md-nav__link">
+        微服务
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance-test/" class="md-nav__link">
+        性能测试
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown/" class="md-nav__link">
+        Markdown语法
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    推荐算法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    图像识别
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="algorithm-test">Algorithm test</h1>
+<h3 id="_1">推荐算法</h3>
+<p>目前状况：不易对算法处理后的数据的正确性进行校验，</p>
+<pre><code>一方面是由于数据量太大，几亿的数据量；
+另一方面是由于输出结果的不确定性，
+一般而言，大数据运用在推荐、预测、数据挖掘、机器学习等领域。
+</code></pre>
+<p>常见推荐算法有：
+<a href="https://juejin.im/post/5d75ad14f265da03c02c2827">协同过滤、隐语义</a></p>
+<p>可选的方法有:</p>
+<blockquote>
+<p>内部检测：</p>
+</blockquote>
+<pre><code>1. 走读代码，检查数据过滤和数据转化是否合理，有无不必要的
+data lost
+2. 检查是否有不符合字段正则的值`比如ip、时间、邮箱、mac地址的正则等，甚至是否存在乱码等)`
+3. 检查结果和具体的产品情况是否符合
+`比如活跃小时段： *一般来说大部分产品凌晨用户不太活跃；*年龄分布；学历比例；操作系统（安卓 ios pc)`
+4. 数据互斥 `消费能力和年龄互斥：比如学生一般小于25，但消费能力不随年纪小而减小`
+</code></pre>
+<blockquote>
+<p>抽样</p>
+</blockquote>
+<pre><code>从所有的结果当中进行抽样，然后进行基本的业务测试，看是否符合设计需求。或者采用众包测试。当然如果是几亿数据量的话，测试的覆盖率的确会比较低。
+</code></pre>
+<blockquote>
+<p>构造数据</p>
+</blockquote>
+<pre><code>自己构造测试数据，然后对这些数据的输出结果进行测试
+</code></pre>
+<blockquote>
+<p>AB测试</p>
+</blockquote>
+<pre><code>如果对于迭代的产品或者算法，我们可以用之前的数据进行测试，然后将结果进行一个基于数据的diff测试。新的测试结果，至少应该不比之前的糟糕。但如果是一个新产品的话，这个就无法实现了。
+</code></pre>
+<blockquote>
+<p>算法接口测试</p>
+</blockquote>
+<pre><code>将算法当成一个有结果返回的接口，，所以我们可以做接口的单元测试和冒烟测试，还可以进行压测，即在预估的 qps 下看 rt 是否满足业务方的要求，load 是否过大，超时和错误的比例是否符合一定的预期等。
+</code></pre>
+<p>对于大数据领域来说，测试输入无法穷举，对结果来说，系统输出y一直在'理想的好'和'极值的差'之间游离。
+这类系统验收与传统质量保障方案有较大差异。</p>
+<pre><code>针对算法特性，依然可以分为：
+    算法功能性验证： 达到目标，选取数据集，推荐符合百分之多少的预期, 异常测试，容错，抗压，死锁，健壮性 
+    非功能性验证：  算法复杂度O(N)，性能拐点, 是否资源损耗，计算密集型还是存储密集型
+    同类算法的交错验证: 比较不同算法的准确度，或者AB测试与自己的上一次进行对比
+</code></pre>
+<p>推荐系统的流程</p>
+<pre><code>召回 --&gt; 打分排序 --&gt; 输出
+    1. 召回阶段通常的手段是协同过滤比较场景，也有使用 embedding 的方式通过向量之间的距离进行召回。假如现在推荐一个商品，那么就得基于用户感兴趣的物品 。而这些感兴趣的物品其实就是用户有过历史行为的物品，例如最近一段时间内的点击、加购、收藏、购买的物品。将这些商品做为 trigger 进行召回，按照协同过滤算法算出商品之间的相似分值，然后按照一定数量进行过滤。因为过滤也是依靠分数来进行的，所以这一步也称粗排。
+    2. 召回完商品后，我们需要对这些商品进行精排，也就是用模型来预估 ctr。一般情况下 LR、GBDT、FM 用的比较多，深度网络相对用的少。主要为了考虑到性能，尤其是 rt，因为绝大部分的精排都是需要实时预测的，所以对耗时有一定的要求。
+    3. 模型预测的步骤如下：首先针对召回的商品进行特征的补充，例如该商品的一级类目、叶子类目（一级类目代表比较，叶子类目代表最细分的类目）、被多少用户购买等；然后再加入人的特征，例如性别、年龄、收入、对类目的偏好等；最后将这些物品和用户的信息做为 feature，根据模型预测的结果进行排序输出。
+打分过程中的模型需要提前训练和部署。其中训练集包括label和feature，label 是用户的历史行为（点击、购买等），feature 是用户的特征（性别、年龄）和商品的特征（类别、价格）。
+</code></pre>
+<p>算法端质量</p>
+<pre><code>算法端的质量可以分为3个方面：算法数据、算法模型、算法效果；
+算法数据： 算法在训练前的数据处理非常重要。数据的来源，特征的构造，数据抽取、加工整个的过程都有可能会出现错误，而且数据一般都是存储在分布式系统数据库里，因此需要借助类似 hive 这样的工具将 sql 转换成 MapReduce 的任务去进行离线的计算，离线任务的产出通常会耗费不少的时间，而对于一些日更新的模型通过对数据对产出时间有一定的要求。
+因此数据这块最主要的保证点为：数据本身的质量，和数据的产出时间。数据本身的质量一般可以通过数据大小的整体抖动，以及关键字段是否为空、主键是否重复等，具体实现方法包括简单 sql 或者 udf ，借助工程能力就能做到预警、检查、出报表等。
+算法模型： 模型的本身在迭代过程中也是需要关注的，不过通常算法同学的训练优化也是参考这些指标，所以我们也可以把这几个指标做为模型本身好坏的评估，主要包括准确率、召回率、AUC。
+算法效果： 判断这个算法推荐出的效果究竟好不好，是一个非常主观的事情，但是我们仍然要衡量算法的好坏。
+</code></pre>
+<p>指标评估：</p>
+<pre><code>指标化推荐结果，也就是将推荐的结果用不同的指标来进行说明，通过这些指标，我们可以更加全面了解推荐系统，部分指标不一定越高越好，需要让它保持在一定的范围内。下面我们看下这些指标
+</code></pre>
+<blockquote>
+<p>覆盖率</p>
+</blockquote>
+<pre><code>定义：推荐系统能够推荐出来的 “商品 / 类目” 占“总商品 / 类目”集合的比例。假设系统的用户集合为 U，推荐系统给每个用户推荐一个长度为 N 的物品列表 R(u) ，总物品为 N。那么：
+意义：描述推荐系统对物品发掘的能力。
+举个例子，网站的条目千千万万，推荐系统能否保证让新的一些文章有足够的机会曝光出去呢？还是有些商品永远都无法得到推荐曝光的机会。这个指标反应的就是这个情况，显然物品的覆盖率是达不到 100% 的，但是我们可以看类目的覆盖率来进行衡量，假设全网所有的一级大类目一共 2 千个（和全网上亿的物品相比非常的少），那么推荐系统一天之内推荐出去的商品对应的一级类目，这个就是我们要衡量的标准。如果一级类目的覆盖率达不到 100%，那么肯定是有问题的。
+</code></pre>
+<blockquote>
+<p>基尼系数</p>
+</blockquote>
+<pre><code>覆盖率反应出的分布情况是比较有限的，我们只能知道哪些类目覆盖了，哪些没有覆盖，那类目之间究竟哪个类目占的多，哪个类目占的少呢？为了更细致地描述推荐系统发掘长尾的能力，我们需要统计推荐列表中不同类目出现次数的分布，引入基尼系数来评价。
+定义：按照类目的流行度（曝光次数）从大到小排序后进行统计后进行洛伦茨曲线的绘制。
+做法：以类目分布基尼系数为例，算出所有的类目被曝光的次数，需要以天周期为单位进行数据的统计。
+这里需要说明一下，基尼系数越大代表所有类目的分布越不均匀，系数越小代表类目分布越均匀。我们知道，每个电商网站都有其侧重的类目，因此绝对平均不是一件好事，头部的类目占比稍多一些但是不能太离谱，举个例子 100 个类目，前 5 个占比到 30～40% 是相对比较好的。当然绝对的只看这个数据意义也不是很大，更多的是长期对这个指标进行监控，看是否会发生大的变动。
+</code></pre>
+<blockquote>
+<p>打散度</p>
+</blockquote>
+<pre><code>定义：描述推荐结果中结果数据的分散程度。
+这里需要解释一下，这里首先是对两两物品（不同的位置）计算为打散度后，得出整体的打散度。相似函数 sim 代表两两是否相同，相同则为 1，不相似则为 0。关于两个内容之间距离对打散度的影响，不能是线性的关系，因为随着两个商品出现的位置越来越大，用户对重复商品的感受会逐渐的减弱（很近的位置就有两个相似的内容觉得会有些重复，但是如果比较远的位置有两个相似的一般是可以接受的），一般双列流屏幕出现内容大概是 4 个，0.85^(5-1) 大概在 0.5 左右，所以如果是 5 以内，则打散度会很低，但是如果 &gt; 5 了，打散度就不会衰减的比较厉害了。 相似的两个物品越靠近，权重越大。
+</code></pre>
+<blockquote>
+<p>更新率</p>
+</blockquote>
+<pre><code>定义：描述推荐系统不断迭代过程中推荐结果变化程度的指标。
+上面公式还是以类目为例，S昨日S 昨日代表昨天一天出现的所有商品所在的类目的个数，然后两天的交集除以并集，计算得出推荐出商品所属类目的更新率。
+</code></pre>
+<blockquote>
+<p>发现性</p>
+</blockquote>
+<pre><code>定义：推荐系统对用户未产生过关系的商品的发现能力。
+在全网商品中，可能有一些比较好的商品，但是用户从来都没有点击过类似的物品，这时候推荐系统推荐给用户的时候，用户很有可能会眼前一亮，满满惊喜。
+同样以类目为例，今天我点击了一个我感兴趣的商品，而这个商品的类似恰恰是我前一周都没有点击过的内容，这就说明推荐系统的为我推荐了一个我之前都没有关注过并且我感兴趣的内容，也就是系统的发现性，在算出每个人的值之后，再进行求平均计算。
+</code></pre>
+<blockquote>
+<p>上新率</p>
+</blockquote>
+<pre><code>定义： 新内容被推荐系统推荐的曝光情况，这里可以从两个维度产出这项指标。
+意义：对于一些社区类产品 UGC 内容的推荐，用户生产的优质是整个社区最重要的一部分，及时的曝光用户的新内容对于增加用户留存和给社区增添活力都有很大的帮助，因此需要这两个指标来评估推荐算法对于新内容的推荐能力。
+</code></pre>
+<blockquote>
+<p>NDCG</p>
+</blockquote>
+<pre><code>有些文章中推荐使用这个指标，但是个人觉得这个更加适合评价搜索的结果。
+</code></pre>
+<blockquote>
+<p>失效率</p>
+</blockquote>
+<pre><code>定义： 表示系统没有推荐或推荐后未被用户点击数据占全集的比例。
+S(0) 表示实际点击次数为 0 的数据个数；S 表示推荐集合的总数。
+首先需要定义一个时间范围来计算没有被推荐出的。其含义为最终未被用户真正感知的数据的占比，未感知包含未推荐和推荐出去后未被点击的内容。
+</code></pre>
+<blockquote>
+<p>健壮性</p>
+</blockquote>
+<pre><code>定义：算法健壮性的评测主要利用模拟攻击。首先，给定一个数据集和一个算法，可以用这个算法给这个数据集中的用户生成推荐列表。然后，用常用的攻击方法向数据集中注入噪声数据，然后利用算法在注入噪声后的数据集上再次给用户生成推荐列表。最后，通过比较攻击前后推荐列表的相似度评测算法的健壮性。
+总结：适合在离线环境进行完成，针对模型本身的评测。
+除了上面介绍的通过这些指标的方法来进行评估，当推荐真正运用在业务上，通过业务侧的一些数据反馈也可以知道推荐算法的好坏。具体看下面两项：
+</code></pre>
+<blockquote>
+<p>负反馈</p>
+</blockquote>
+<pre><code>定义：负反馈相当于一个轻量级便携的用户反馈，用户可以直接对推荐出的内容给与反馈，推荐系统在拿到了用户实时反馈后就会立刻针对反馈信息对推荐结果做出相应的调整，而我们也可以在事后拿到负反馈的整体数据来评价推荐系统在用户侧是否有重大舆情产生。一般 app 的推荐都会有负反馈机制，如图：
+</code></pre>
+<blockquote>
+<p>CTR (Click Through Rate)</p>
+</blockquote>
+<pre><code>Click-Through-Rate，即点击率，点击数 / 曝光数。推荐算法效果的最最重要指标，没有之一。一般算法好不好，都会直接用这个指标直接定义。通常算法模型在迭代的过程中都会进行 A/B test。所谓 ab test 就是有一个基准桶，一个对比桶，通过收集两个不同方案在用户侧的点击率，来评估算法的好坏，一般来说当流量特别大的时候，基本上一个 ab 实验上线几分钟就可以出算法的好坏了。当然算法的分桶不仅限只有两个桶，像下面这个推荐每个分桶的数据都可以非常直观的展示出来。一般需要借助Blink 等工具来实时的显示点击率数据。
+</code></pre>
+<blockquote>
+<p>CVR (Click Value Rate)</p>
+</blockquote>
+<pre><code>Click Value Rate，即转化率，转化数 / 点击数。通常在广告上用的比较多，对于商品来说也就是用户最终点击并且购买的转化率。因为最终决定转化的因素还是比较多的，不单单是推荐算法影响的，所以这个指标通常不做为模型迭代优化的衡量标准，但是由于其和最终的 "钱" 挂钩，所以一般领导会更加关注这个指标。
+</code></pre>
+<p>总结：</p>
+<pre><code>我们需要真正的将这些内容结合到业务上去，看它究竟反应业务什么样的情况，抽丝剥茧，更加的理解业务、反哺业务。任何一个指标都需要对业务有指导意义，真正帮助业务提升。整体的质量方案的概要图如下。
+</code></pre>
+<p>检索自: CSDN <a href="https://blog.csdn.net/sinat_26811377/article/details/99785903`">推荐系统算法测试</a></p>
+<h3 id="_2">图像识别</h3>
+<p>包含机器视觉或生物识别</p>
+<pre><code>机器视觉： 用计算机或摄像机代替人对目标进行识别跟踪和测量等机器视觉，对图像进行识别，并进一步处理成为人眼观察或传送给仪器检测的图像。
+生物识别： 计算器，光学，声学，生物传感器，统计学等手段，及生物（如人类）固有的生理特性和行为特征进行个人身份的鉴定，比如指纹等。
+
+一副图像是由N*M个像素点组成的，每个像素点又分R、G、B3种不同的色值，每个色值又有个固定的int型数据（0~256），3个通道的色值排列组合出来万般色彩，此为信息。
+换句话说，通过对像素点色值的数据处理和分类，可以实现识别的概念。这就是小编眼中的图像识别。
+</code></pre>
+<p>图像识别测试需要理解图像在被机器解析时是像素点，准备数据图像的时候可以基于此。</p>
+<p>简单的神经网络举例:</p>
+<pre><code>Michael Nielsen在他杰出的在线深度学习教程中描述的一个简单神经网络。目标是让神经网络从28X28像素的图片上正确地识别一个手写的数字(例如0，1，2)。
+每个图片有28x28=784个输入值，每个都用0或1代表这个像素是深色还是浅色。Nielsen 构建了一个这样的神经网络:插图里中层和右层每个圆圈代表我们上一段说的那种神经元。每个神经元为输入值加权求平均，然后加上偏置，然后调用一个激活函数。值得注意的是左层的圆圈不是神经元，它们代表的是输入值。虽然只画了8个输入圈，但实际上有784个输入——每个代表一个像素。
+右层的10个神经元代表“亮灯”猜测不同的数字：假如是0，首个神经元应该被激活(其他神经元不激活)，假如是1则是第二个神经元被激活(其余的不激活)，如此类推。
+每个神经元接收上一层所有神经元的输入。所以中层的15个神经元都是收784个输入值。它们每个都为784个输入值设置权重。这意味着在此层有15X784=11760个权重参数。同理，输出层有10个神经元，每个都从中层的15个神经元接收输入值，所以又多了15*10个权重参数。与此同时，整个网络25个神经元共有25个偏置。
+</code></pre>
+<p>多层神经网络和神经网络训练论文：</p>
+<pre><code>神经网络之所以特别，是因为我们知道如何用一些算式，一堆数据，以及海量算力来“训练”它们。我们可以建造一个合适的通用神经网络来替代用人类程序员专门写来执行特定任务的神经网络。刷过一堆打过标签的数据后，它会修改神经网络本身，让自己能尽可能打出正确的标签。我们希望得出的神经网络具有通用性，能为不在训练数据中的样本也正确地打标签。
+在AlexNet发表之前，这个努力已经开始了。1986年，三位研究人员发表了一篇关于反向传播(backpropagation)的里程碑式论文。该技术是一种有助于训练复杂神经网络的数学方法。
+
+为此，反向传播算法会为各个权重参数算出一个误差梯度。这是一个衡量输出错误有多大程度被输入权重所被改变的维度。算法会依照这个梯度决定多大程度改变每个输入值的权重——梯度越大，这个参数修改越多。
+换句话说，这个训练过程“教会”输出神经元更少地注意导向错误的输入方(即中层的神经元)，更多地注意正确方向的输入方。
+</code></pre>
+<p>卷积网络：</p>
+<pre><code>当神经网络学习识别图像中某个位置的形状时，它应该能够将这种学习应用于识别图像中其他位置的类似形状。
+“这就像拿一个模板或模式，然后将其与图像上的每一个点进行匹配，”人工智能研究员唐杰(音)说。“你有一个狗的模板轮廓，然后发现右上角和你的模板基本匹配——那里有条狗吧?”如果没有，可以稍微移动一下模板，遍历整张图片。狗出现在在图像哪个位置并不重要。模板会匹配到它。你不会想让网络的每个子部分都学习自己单独的狗识别器。
+试想一下，如果我们把一幅大图像分成28*28像素的小块。然后，我们可以将每个小块输入到之前所述的全连接的手写识别网络中。如果这些小块中的“7”输出至少有一个被点亮，就意味着整个大图中可能有7的存在。这就是卷积网络的本质。
+在卷积网络中，这些“模板”被称为特征检测器(feature detector)，它们所观察的区域被称为接受域(receptive field)。真正的特征检测器的接受域往往比边长28像素小得多。
+如何工作：
+卷积层是一层神经元。像任何神经元一样，这些神经元取其输入的加权平均值，然后应用一个激活函数。用我们讨论过的反向传播技术来训练当中的参数。
+但与上面的神经网络不同，卷积层没有全连接。每个神经元只接受前一层神经元的一小部分输入。更重要的是，卷积网络中的神经元共享输入权重。
+让我们放大AlexNet的第一个卷积层中的第一个神经元。这一层的接受域大小是11×11像素,所以第一个神经元接收某角落的11×11像素。这个神经元接受这121个像素的输入，每个像素有三个值——红、绿、蓝。神经元总共有363个输入。和任何神经元一样，这个神经元取363个输入值的加权平均值，然后应用一个激活函数。因为它有363个输入值，它也需要363个输入权重参数。
+AlexNet第一层中的第二个神经元与第一个神经元非常相似。它同样接收11×11像素,但它的接受域是从第一个神经元的接受域平移4个像素开始。这就在两个接受域之间产生了7个像素的重叠，这就避免了遗漏两个神经元之间的有趣模式。第二个神经元同样接收描述11×11像素的363个值,每个值乘以权重参数,求和,并调用一个激活函数。
+特殊的是，第二个神经元没有自己的一组363个输入权重，而是使用与第一个神经元相同的输入权重。第一个神经元的左上角像素使用与第二个神经元的左上角像素相同的输入权重。所以这两个神经元在寻找完全相同的模式。它们的接受域之间有4个像素的偏移。
+当然实际远不止两个神经元——图片分为55×55格共3025个神经元。这3025个神经元中的每一个都使用与开始两个神经元相同的363个输入权重。所有这些神经元共同“扫描”图像中可能存在的特定模式，组成一个特征检测器。
+请记住，AlexNet的第一层有96个特性检测器。我刚才提到的3025个神经元组成了96个特征探测器中的一个。其他95个特征探测器则是由各自的一组3025个神经元组成。每组3025个神经元与组内其他神经元共享其363个输入权重，但不是和其他95个特征检测器的神经元共享。
+卷积网络的训练使用与训练全连接网络相同的基础反向传播算法，但是卷积结构使得训练过程更加高效。
+“使用卷积非常有用，因为可以重用参数，”机器学习专家和作家Sean Gerrish告诉Ars(本文原作者机构)。这大大减少了网络需要学习的输入权重的数量，这使得网络可以用更少的训练样本产生更好的结果。
+从图像的一个部分学到的识别模式，可以转化用于识别其他图像的其他位置的相同模式。这使得网络可以通过更少的训练实例来实现高性能。
+</code></pre>
+<p>专业词汇对照表:</p>
+<pre><code>neural network 神经网络
+computing power 算力
+convolutional network 卷积网络
+neuron 神经元
+weight 权重
+bias 偏置
+activation function 激活函数
+Non-linear activation function 非线性激活函数
+light up 亮灯(即匹配)
+layer 层
+receptive field 感受域
+backpropagation 反向传播
+top-five error rate top5错误率
+error gradient 误差梯度
+matrix 矩阵
+fully connected layer 全连接层
+pattern 模式
+feature detector 特征检测器
+brute-force statistical 暴力统计
+</code></pre>
+<p>检索自: <a href="https://segmentfault.com/a/1190000017913380">计算机如何高效识别图像</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            <br></br>Copyright @sjia | Jesus loves me</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>
